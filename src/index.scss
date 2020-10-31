@@ -1,0 +1,129 @@
+@import "scss/colors";
+
+* {
+  font-family: "Itim", cursive;
+}
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
+  padding: 0;
+}
+
+.App {
+  width: 100%;
+  height: 100vh;
+
+  display: flex;
+  .sideBar {
+    width: 60px;
+    height: 100%;
+    background: $black_opacity;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    &__logo {
+      width: 100%;
+      a {
+        height: 80px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: $cilver;
+        i {
+          font-size: 40px;
+          color: #000;
+        }
+      }
+    }
+    &__menu {
+      width: 100%;
+      &__list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        height: 250px;
+        li {
+          width: 100%;
+          height: 40px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          cursor: pointer;
+          position: relative;
+          z-index: 100;
+          i {
+            transition: all 0.1s ease-in-out;
+            font-size: 20px;
+            color: $cilver;
+            z-index: 100;
+          }
+          &:hover i {
+            color: $blue;
+          }
+          a {
+            position: absolute;
+            top: 50%;
+            left: -166%;
+            transform: translateY(-50%);
+            text-decoration: none;
+            width: 80px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #fff;
+            color: $cilver;
+            transition: all 0.2s ease-in-out;
+            opacity: 0.6;
+            font-size: 13px;
+            font-weight: bold;
+            &:hover {
+              color: $blue;
+            }
+          }
+          &:hover a {
+            opacity: 1;
+            left: 100%;
+            background: $black_opacity;
+          }
+        }
+      }
+    }
+    &__social {
+      width: 100%;
+      &__list {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0;
+        margin: 0;
+        width: 100%;
+        height: 80px;
+        padding: 20px 0;
+        li {
+          i {
+            color: $cilver;
+            font-size: 18px;
+            cursor: pointer;
+            &:hover {
+              color: $blue;
+            }
+          }
+        }
+      }
+    }
+  }
+}

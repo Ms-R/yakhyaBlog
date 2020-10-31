@@ -1,0 +1,131 @@
+.content {
+  width: 100%;
+  color: #fff;
+  background: rgb(29, 29, 29);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: all 1s ease-in-out;
+
+  &__block {
+    margin-top: -100px;
+    padding-left: 120px;
+    &__text {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: space-between;
+      h1 {
+        font-size: 70px;
+        font-weight: normal;
+        margin: 0;
+      }
+      span {
+        opacity: 0.6;
+        letter-spacing: 2px;
+      }
+      button {
+        cursor: pointer;
+        padding: 10px 40px;
+        border: 1px solid rgb(255, 115, 0);
+        outline: none;
+        background: transparent;
+        color: #fff;
+        font-size: 15px;
+        opacity: 0.5;
+        transition: all 0.3s;
+        box-shadow: 0px 0px 5px 2px rgba(255, 255, 255, 1);
+        margin-top: 30px;
+
+        &:hover {
+          opacity: 1;
+          transform: translate(-5px, -5px);
+          box-shadow: 3px 3px 5px 0px rgba(255, 255, 255, 0.8);
+        }
+      }
+    }
+  }
+  &__effect {
+    width: 500px;
+    height: 500px;
+    position: relative;
+    span:nth-child(1) {
+      position: absolute;
+      top: 200px;
+      left: 200px;
+      border-radius: 100px;
+
+      animation: rightAnamtion 3.4s ease-in-out;
+      animation-iteration-count: infinite;
+      animation-direction: alternate;
+    }
+    span:nth-child(2) {
+      position: absolute;
+      top: 140px;
+      left: 180px;
+
+      border-radius: 100px;
+      animation: leftAnamtion 3.5s ease-in-out;
+      animation-iteration-count: infinite;
+      animation-direction: alternate;
+    }
+    span:nth-child(3) {
+      position: absolute;
+      top: 230px;
+      left: 200px;
+
+      border-radius: 100px;
+      animation: topAnamtion 3.6s ease-in-out;
+      animation-iteration-count: infinite;
+      animation-direction: alternate;
+    }
+    span:nth-child(4) {
+      position: absolute;
+      top: 170px;
+      left: 200px;
+
+      border-radius: 100px;
+      animation: bottomAnamtion 3.7s ease-in-out;
+      animation-iteration-count: infinite;
+      animation-direction: alternate;
+    }
+    span {
+      width: 60px;
+      height: 20px;
+      font-size: 22px;
+    }
+  }
+}
+
+@keyframes rightAnamtion {
+  from {
+    transform: translateX(60px);
+  }
+  to {
+    transform: translateX(-60px);
+  }
+}
+@keyframes leftAnamtion {
+  from {
+    transform: translateX(-60px);
+  }
+  to {
+    transform: translateX(60px);
+  }
+}
+@keyframes topAnamtion {
+  from {
+    transform: translateX(60px);
+  }
+  to {
+    transform: translateX(-60px);
+  }
+}
+@keyframes bottomAnamtion {
+  from {
+    transform: translateX(-60px);
+  }
+  to {
+    transform: translateX(60px);
+  }
+}
